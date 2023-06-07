@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <title>レンタル管理</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="/css/list.css" rel="stylesheet" />
+    <link href="/css/rental.css" rel="stylesheet" />
+</head>
+<body>
+ <div class="container mt-4">
+
+    <div class="col-md-12 text-center bg-primary">
+      <h5 class="rental-heading">レンタル管理</h5>
+    </div>
+  </div>
+</div>
+
+     <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-4">
+                <h4>顧客情報</h4>
+                <ul>
+                    <li><a class="btn btn-dark" th:href="@{/user/search}">顧客検索</a></li>
+                    <li><a class="btn btn-dark" th:href="@{/user/add}">新規顧客登録</a></li>
+                    <li><a class="btn btn-dark" th:href="@{/user/info}">登録顧客一覧</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h4>商品情報</h4>
+                <ul>
+                    <li><a class="btn btn-dark" th:href="@{/user/search1}">商品検索</a></li>
+                    <li><a class="btn btn-dark" th:href="@{/product/add}">新規商品登録</a></li>
+                    <li><a class="btn btn-dark" th:href="@{/product/menyu}">在庫管理</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h4>その他</h4>
+                <ul>
+                    <li><a class="btn btn-dark" th:href="@{/user/oversearch}">返却期限超過リスト</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-4">
+        <div class="row justify-content-center">
+       <div class="col-md-8">
+
+                <h5 class="rental-now">貸し出し中</h5>
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>商品名</th>
+                            <th>顧客名</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="rentallist : ${rentallist}" th:object="${rentallist}">
+                            <td th:text="*{name}"></td>
+                            <td th:text="*{pname}"></td>
+                            <td>
+                            <a th:href="@{/rental/{id}/edit(id=*{id})}" class="btn btn-primary">編集</a>
+                            <a th:href="@{/rental/{id}/delete(id=*{id})}" class="btn btn-secondary">削除</a>
+                        </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,73 @@
+/* スタイルを追加 */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("https://media.istockphoto.com/id/647570666/ja/%E3%83%99%E3%82%AF%E3%82%BF%E3%83%BC/web-%E3%82%B5%E3%82%A4%E3%83%88%E3%81%AE%E3%83%98%E3%83%83%E3%83%80%E3%83%BC%E3%81%AE%E6%8A%BD%E8%B1%A1%E7%9A%84%E3%81%AA%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E6%83%85%E5%A0%B1%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC%E3%81%AE%E8%83%8C%E6%99%AF.jpg?s=1024x1024&w=is&k=20&c=ae0ffzXAXyMkwVcUsiDvMXZvg8kIWx9chOrzQqdei7s=");
+
+  background-size: cover;
+  background-position: center center;
+}
+h5 {
+background-color: #333;
+color: #fff;
+padding: 20px;
+margin: 0;
+text-align: center;
+}
+
+
+h4 {
+ font-size: 1.7em;
+  font-weight: bold;
+}
+form {
+background-color:#fff ;
+border: 1px solid #ccc;
+border-radius: 5px;
+box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+margin: 20px auto;
+max-width: 600px;
+padding: 20px;
+}
+input[type="text"] {
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+width: 80%;
+margin-bottom: 10px;
+font-size: 16px;
+}
+input[type="submit"] {
+background-color: #333;
+color: #fff;
+border: none;
+border-radius: 5px;
+padding: 10px 20px;
+font-size: 16px;
+cursor: pointer;
+}
+input[type="submit"]:hover {
+background-color: #555;
+}
+table {
+background-color: #fff;
+border: 1px solid #ccc;
+border-radius: 5px;
+box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+margin: 20px auto;
+max-width: 600px;
+padding: 20px;
+}
+th {
+background-color: #eee;
+padding: 10px;
+text-align: left;
+width: 150px;
+}
+td {
+padding: 10px;
+}
+.cell_title {
+font-weight: bold;
+}
