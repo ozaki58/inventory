@@ -11,5 +11,9 @@ public class Syouhin1 {
 
    private Long num;
 
+   private Long rentalnum;
+
+   private Double rentalRate;
+
 
 }
