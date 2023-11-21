@@ -70,6 +70,19 @@ public class ProductController {
 
 
 
+//rentalranking画面を表示
+  @GetMapping(value = "/rental/ranking")
+  public String rentalRanking(Model model) {
+	  List<Syouhin1> rankinglist = productService.rentalRanking();
+	  for (Syouhin1 item : rankinglist) {
+          double rentalRate = (double) item.getRentalnum() / (item.getNum() + item.getRentalnum());
+          item.setRentalRate(rentalRate);
+      }
+	  model.addAttribute("rankinglist", rankinglist);
+    return "rental/ranking";
+  }
+
+
 
   //在庫商品一覧画面を表示
   @GetMapping(value = "/product/menyu")
