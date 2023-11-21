@@ -28,22 +28,25 @@ public class ProductService {
 	    return productMapper.productSearchAll();
 		}
 
+        public List<Syouhin1> rentalRanking(){
+	    return productMapper.rentalRanking();
+		}
 
 
-	     public void productSave(ProductAddRequest productAddRequest) {
-	        productMapper.productSave(productAddRequest);
-	    }
+	 public void productSave(ProductAddRequest productAddRequest) {
+	 	productMapper.productSave(productAddRequest);
+	        }
 
 
-	    public void productDelete(Long id) {
+	 public void productDelete(Long id) {
 	        productMapper.productDelete(id);
 	    }
 
-	    public void productUpdate(ProductUpdateRequest productUpdateRequest) {
+	public void productUpdate(ProductUpdateRequest productUpdateRequest) {
 	       productMapper.productUpdate(productUpdateRequest);
 	    }
 
-	    public Syouhin1 productFindById(Long id) {
+	 public Syouhin1 productFindById(Long id) {
 	        return productMapper.productFindById(id);
 	    }
 
