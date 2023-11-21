@@ -23,7 +23,8 @@ List<Syouhin1> productSearch(ProductSearchRequest productSearchRequest);
 List<Syouhin1> productSearchAll();
 @Select("SELECT * FROM Syouhin1 WHERE id=#{id} ")
 Syouhin1 productFindById(Long id);
-
+@Select("SELECT * FROM Syouhin1 ORDER BY rentalnum/(num + rentalnum)  DESC" )
+List<Syouhin1> rentalRanking();
 @Update("UPDATE Syouhin1 SET name=#{name}, num=#{num} WHERE id=#{id}")
 void productUpdate(ProductUpdateRequest product);
 
